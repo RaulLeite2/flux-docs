@@ -1,0 +1,8 @@
+name: flux-docs-ci
+on: [push, pull_request]
+jobs:
+  validate-docs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: test -f docs/index.html
